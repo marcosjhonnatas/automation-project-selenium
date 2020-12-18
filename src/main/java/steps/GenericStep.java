@@ -1,6 +1,8 @@
 package steps;
 
 import org.openqa.selenium.Dimension;
+import java.time.format.DateTimeFormatter;  
+import java.time.LocalDateTime;   
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -10,34 +12,33 @@ import cucumber.api.java.Before;
 
 public class GenericStep {
 	
-	private static WebDriver driver;
-	private GenericStep() {}
+	public static WebDriver driver;
+	public GenericStep() {}
 	
-	public static WebDriver getDriver() {
-		if (driver == null) {
-			
-			driver = new ChromeDriver();
-			driver.manage().window().setSize(new Dimension(1200, 700));
-		}
-		return driver;
-		
+	public static WebDriver getDriver() {	
+		if (driver == null) {		
+			return driver = new ChromeDriver();		
+		}	
+		driver.manage().window().setSize(new Dimension(800, 700));	
+		return driver;	
 	}
 	
-	public static void KillDriver() {
-		if (driver != null) {
-			driver.quit();
-			driver = null;	
-		}
+	public static String returnActualDate() {
+		   DateTimeFormatter dtf = DateTimeFormatter.ofPattern("MM/dd/yyyy");  
+		   LocalDateTime now = LocalDateTime.now();  
+		   String actualDate = dtf.format(now).toString();
+		   System.out.println(actualDate);
+		return null;  
 	}
 	
-	@After
+	@Before
 	public void start() {
 		getDriver().get("http://sampleapp.tricentis.com/101/app.php");
 	}
 	
-	@Before
-	public void end() {
-		KillDriver();
+	@After
+	public static void KillDriver() {
+		driver.quit();
 	}
-
+	
 }
