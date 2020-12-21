@@ -3,8 +3,11 @@ Projeto pertinente ao processo seletivo Accenture
 
 # Tecnologias
 Sellenium;
+
 Java;
+
 Cucumber;
+
 jUnit
 
 # Tecnologias
