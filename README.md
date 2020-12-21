@@ -9,10 +9,10 @@ jUnit
 
 # Tecnologias
 
-Apesar de a solicitação requisitar somente a execução do Cenário Principal, deixei features disponível para execução de cenários respectivos às 
+Apesar ter sido solicitado somente a execução do Cenário Principal, deixei features disponíveis para execução de cenários respectivos às 
 abas individualmente.
 
-A feature solicitada se encontra em "src/main/resources/features/validateInsuranceQuote.feature"
+A feature que corresponde à validção do fluxo principal se encontra em "src/main/resources/features/validateInsuranceQuote.feature"
 
 ### Pré-requisitos
 
