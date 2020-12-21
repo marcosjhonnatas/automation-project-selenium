@@ -20,6 +20,7 @@ A feature que corresponde à validção do fluxo principal se encontra em "src/m
 ### Pré-requisitos
 
 Maven: https://maven.apache.org/download.cgi;
+
 ChromeDriver (de acordo com a versão do chorme instalada em sua máquina): https://chromedriver.chromium.org/downloads
 
 ### Como executar
