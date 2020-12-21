@@ -1,12 +1,13 @@
 package steps;
 
+import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Calendar;
+import java.util.Date;
 import org.openqa.selenium.Dimension;
-import java.time.format.DateTimeFormatter;  
-import java.time.LocalDateTime;   
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
 
@@ -17,7 +18,7 @@ public class GenericStep {
 	
 	public static WebDriver getDriver() {	
 		if (driver == null) {		
-			return driver = new ChromeDriver();		
+			driver = new ChromeDriver();			
 		}	
 		driver.manage().window().setSize(new Dimension(800, 700));	
 		return driver;	
@@ -26,9 +27,17 @@ public class GenericStep {
 	public static String returnActualDate() {
 		   DateTimeFormatter dtf = DateTimeFormatter.ofPattern("MM/dd/yyyy");  
 		   LocalDateTime now = LocalDateTime.now();  
-		   String actualDate = dtf.format(now).toString();
-		   System.out.println(actualDate);
-		return null;  
+	   return dtf.format(now).toString();
+	}
+	
+	public static String sumYersInActualDate(int years) {
+			Date actualdate = new Date();
+			Calendar calendar = Calendar.getInstance();
+			calendar.setTime(actualdate);
+			calendar.add( Calendar.YEAR,years);
+			Date date = calendar.getTime();
+			SimpleDateFormat frmt = new SimpleDateFormat("MM/dd/yyyy");
+		return frmt.format(date); 
 	}
 	
 	@Before
@@ -38,7 +47,10 @@ public class GenericStep {
 	
 	@After
 	public static void KillDriver() {
-		driver.quit();
+		if (driver != null) {
+			driver.quit();
+			driver = null;
+		}
 	}
 	
 }
