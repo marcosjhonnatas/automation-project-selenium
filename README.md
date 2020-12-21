@@ -12,8 +12,7 @@ jUnit
 
 # Tecnologias
 
-Apesar ter sido solicitado somente a execução do Cenário Principal, deixei features disponíveis para execução de cenários respectivos às 
-abas individualmente.
+Apesar de ter sido solicitado somente a execução do Cenário Principal, deixei features disponíveis para execução individual de cenários referentes às abas. Prevendo uma situação aonde não fosse necessário a execução de todo o fluxo da funcionalidade.
 
 A feature que corresponde à validção do fluxo principal se encontra em "src/main/resources/features/validateInsuranceQuote.feature"
 
@@ -30,4 +29,4 @@ ChromeDriver (de acordo com a versão do chorme instalada em sua máquina): http
  
  3 - Caso queira rodar os testes com o jUnit, execute através das Runners disponíveis em: src/main/java/runners;
  
- 4 - Caso queira rodar através das features do cucumber, execute as features disponíveis em: src/main/resources/features.
+ 4 - Caso queira rodar os teste através do cucumber, execute as features disponíveis em: src/main/resources/features.
