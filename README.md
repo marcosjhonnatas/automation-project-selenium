@@ -27,6 +27,6 @@ ChromeDriver (de acordo com a versão do chorme instalada em sua máquina): http
  
  2 - Execute o comando mvn-install na raiz do projeto;
  
- 3 - Caso queira rodar os testes com o jUnit, execute através das Runners disponíveis em: (src/main/java/runners);
+ 3 - Caso queira rodar os testes com o jUnit, execute através das Runners disponíveis em: src/main/java/runners;
  
- 4 - Caso queira rodar através das features do cucumber, execute as features disponíveis em: (src/main/resources/features).
+ 4 - Caso queira rodar através das features do cucumber, execute as features disponíveis em: src/main/resources/features.
