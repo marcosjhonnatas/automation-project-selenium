@@ -14,7 +14,7 @@ jUnit
 
 Apesar de ter sido solicitado somente a execução do Cenário Principal, deixei features disponíveis para execução individual de cenários referentes às abas. Prevendo uma situação aonde não fosse necessário a execução de todo o fluxo da funcionalidade.
 
-A feature que corresponde à validção do fluxo principal se encontra em "src/main/resources/features/validateInsuranceQuote.feature"
+A feature que corresponde à validação do fluxo principal se encontra em "src/main/resources/features/validateInsuranceQuote.feature"
 
 ### Pré-requisitos
 
