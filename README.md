@@ -24,6 +24,9 @@ ChromeDriver (de acordo com a versão do chorme instalada em sua máquina): http
 
 ### Como executar
  1 - Aponte o chorme driver no path do seu S.O;
+ 
  2 - Execute o comando mvn-install na raiz do projeto;
- 3 - Caso queira rodar os testes com o jUnit, execute através das Runners(src/main/java/runners)
- 4 - Caso queira rodar através das features do cucumber, execute as features(src/main/resources/features)
+ 
+ 3 - Caso queira rodar os testes com o jUnit, execute através das Runners(src/main/java/runners);
+ 
+ 4 - Caso queira rodar através das features do cucumber, execute as features(src/main/resources/features).
