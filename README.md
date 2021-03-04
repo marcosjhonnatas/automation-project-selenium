@@ -1,5 +1,5 @@
 # exampleapp
-Projeto pertinente ao processo seletivo Accenture
+Projeto de testes com selenium webdriver, cucumber e jUnit.
 
 # Tecnologias
 Selenium;
